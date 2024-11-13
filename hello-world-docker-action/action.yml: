@@ -1,0 +1,19 @@
+name: 'Hello world docker action'
+description: 'Say hello to a user or the world.'
+on:
+  workflow_dispatch:
+    inputs:
+      who-to-greet:
+        description: Who to greet
+        required: true
+        default: 'World'
+        type: string
+    outputs:
+      time: 
+        description: 'The tiem we said hello.'
+    runs:
+      using: 'Docker'
+      image: 'Dockerfile'
+        args:
+          - ${{ inputs.who-to-greet }}
+        
