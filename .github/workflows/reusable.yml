@@ -9,9 +9,9 @@ on:
         required: true
         default: World
     outputs:
-      current-time:
+      current-timexx:
         description: 'The time when greeting.'
-        value: ${{ jobs.reusable-job.outputs.current-time }}
+        value: ${{ jobs.reusable-job.outputs.current-timexx }}
 
 jobs:
   reusable-job:
